@@ -1,0 +1,237 @@
+<!--
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SignIn</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+            }
+            body{
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                height:100vh;
+                align-items: center;
+                /*background-image: url(https://wallpapercave.com/wp/wp2951423.png);*/
+            }
+            form{
+                color: white;
+                border: 1px solid;
+                width: 350px;
+                border-radius: 7px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                background-color: rgba(5, 6, 6, 0.353);
+            }
+            
+            form input[type="text"]:hover{
+                background-color: lightgray;
+            }
+            form input[type="password"]:hover{
+                background-color: lightgray;
+            }
+            form input[type="submit"]:hover{
+                background-color: lightgray;
+            }
+            form input{
+                width:80%;
+                border: 1px lightgray;
+                border-radius: 3px;
+                padding:10px;
+            }
+            
+            a{
+                text-decoration: none;
+                color: white;
+            }
+            a:hover{
+                color:black;
+            }
+            
+        </style>       
+    </head>
+    <body>
+        <div>
+            <div>
+
+            </div>
+            <form >
+                <label>Username:</label>
+                <input type="text" placeholder="enter username"><br><br>
+                <label>Password:</label>
+                <input type="password" placeholder="enter password"><br><br><br>
+                <input type="submit" value="SignIn"><br><br>
+                <a href="">forget password?</a>
+            
+            </form>
+    </div>
+    </body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    
+    <script type="text/javascript" src="signin.js" defer>
+        
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #c190e4; /* Purple Background */
+        }
+
+        .container {
+            display: flex;
+            width: 800px; /* Adjust width */
+            height: 450px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.63);
+        }
+
+        .login-form {
+            width: 50%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .login-form h2 {
+            margin-bottom: 20px;
+            color: #6a0dad;
+        }
+
+        .input-box {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .input-box i {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: gray;
+        }
+
+        .forgot {
+            text-align: right;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .forgot a {
+            text-decoration: none;
+            color: #6a0dad;
+        }
+
+        .forgot a:hover {
+            text-decoration: underline;
+        }
+
+        .login-btn {
+            background-color: #6a0dad;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .login-btn:hover {
+            background-color: #5b0ba6;
+        }
+
+        .register-link {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .register-link a {
+            color: #6a0dad;
+            text-decoration: none;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+
+        .image-section {
+            width: 50%;
+            background: url(https://cdni.iconscout.com/illustration/premium/thumb/login-page-illustration-download-in-svg-png-gif-file-formats--app-developing-development-secure-mobile-webapp-and-pack-design-illustrations-3783954.png?f=webp) no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Login Form Section -->
+        
+        <div class="login-form">
+            <h2>Login</h2>
+            <div class="input-box">
+                <input id="user" type="text" placeholder="Enter your email">
+            </div>
+            <div class="input-box">
+                <input id="pass" type="password" placeholder="Enter your password">
+            </div>
+            <div class="forgot">
+                <a href="#">Forgot password?</a>
+            </div>
+            <button class="login-btn" onclick="validate()">Login</button>
+            <div class="register-link">
+                Don't have an account? <a href="#">Sign up now</a>
+            </div>
+            
+        </div>
+        <!-- Image Section -->
+        <div class="image-section">
+            
+        </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <style>
+            body{
+                margin: 0;
+            }
+             .up{
+                list-style-type: none;                
+                display: flex;
+                background-color: rgb(255, 255, 255);
+                margin: 0px;
+                position: fixed;
+                width: 100%;
+                left: 0%;
+                top:0%;
+                padding: 0px;
+                height:50px;               
+            }
+            .up li{
+                padding: 5px;
+            }
+            .up a{
+                text-decoration: none;
+                color: black;
+                padding: 12px 15px;
+                display: block;
+                border-right: 1px solid darkgray;
+            }
+            .up a:hover{
+                background-color: rgb(138, 193, 241);
+                color: black;
+                font-style: italic;
+            }
+            .up .at{
+                margin-left: auto;
+                display: flex;
+            }
+            .up  img{
+                width: 30%;
+            }
+            .main{
+                margin-top: 5%;
+                margin-left: 1%;
+            }
+            .main img{
+                width: 99%;
+            }
+            .product{
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+            .sub{
+
+                border: 1px solid black ;
+                width: 150px;
+                height:213px;
+                text-align: center;
+                /*box-shadow: 12px 15px 31px darkgray;*/
+                transition:transform 0.7s ease; 
+                background-color: rgb(238, 238, 238);
+                /*transition: transform 1s ease-in-out;*/
+            }
+            
+            .sub img{
+                width: 100%;
+            }
+            .sub:hover{
+                transform:scale(1.07);
+                box-shadow: darkgray;
+                visibility:visible;
+                /*transform: rotate(360deg);*/
+            }
+            .sub h4,h5{
+                padding-left: 10px;
+                text-align:left ;
+            }
+            h4{
+                font-style: italic;
+            }
+            h5{
+                color:rgb(69, 126, 212)
+            }
+            .dropdown {
+                position: relative;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                top: 40px;
+                left: 0;
+                background-color: white;
+                min-width: 160px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+                z-index: 1000;
+                border-radius: 5px;
+            }
+            .dropdown-content a {
+                color: black;
+                padding: 12px 15px;
+                text-decoration: none;
+                display: block;
+                border-bottom: 1px solid darkgray;
+            }
+            .dropdown-content a:hover {
+                background-color: rgb(48, 104, 215);
+                color: white;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            footer {
+                margin-top: 20px;
+                background: #333;
+                color: #fff;
+                padding-top: 2px;
+                padding-bottom: 10px;
+            }
+            footer p{
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                text-align: center;
+            }
+            h3{
+                color:rgb(30, 105, 218);
+            }
+            button{
+                background-color: black;
+                color:aliceblue;
+            }
+            
+        </style>
+        <script type="text/javascript" src="addtocart.js" defer></script>
+    </head>
+    <body>
+        <ol class="up">
+            <li><img src="D:\programssss\download.png"></li>
+            <li class="at"><a href="" >About</a></li>
+            <li  class="dropdown">
+                <a href="">Products ▼</a>
+                <div class="dropdown-content">
+                    <a href="">Laptops</a>
+                    <a href="">Desktops</a>
+                    <a href="">Printers</a>
+                    <a href="">Ink And Toners</a>
+                    <a href="">Accessories</a>
+                </div>
+            </li>
+            <li ><a href="" >Location</a></li>
+            <li ><a href="cart.html" >Cart</a></li>
+            <li ><a href="" >Profile</a></li>
+            
+        </ol>
+        
+        <div class="main">
+            <img src="https://in-media.apjonlinecdn.com/wysiwyg/l2-menu-banner/L2_Single_Banner_Supplies_baseline_191224.jpg">
+            <h3>Products:</h3>
+            <div class="product">
+               
+            <div class="sub">
+                <img src="D:\programssss\w100_home_cat_laptops_v1.avif">
+                <h4>Laptop</h4>
+                <h5>Price: $345</h5>
+                <button onclick="add('Laptop',345)">Add To Cart</button>
+            </div>
+            <div class="sub">
+                <img src="D:\programssss\w100_home_cat_desktops_v1.avif">
+                <h4>Desktop</h4>
+                <h5>Price: $489</h5>
+                <button onclick="add('Desktop',489)">Add To Cart</button>
+            </div>
+            <div class="sub">
+                <img src="D:\programssss\w100_home_cat_monitors_v1.avif">
+                <h4>Monitor</h4>
+                <h5>Price: $89 </h5>
+                <button onclick="add('Monitor',89)">Add To Cart</button>
+            </div>
+            <div class="sub">
+                <img src="D:\programssss\w100_home_cat_printers_v1.avif">
+                <h4>Printer</h4>
+                <h5>Price: $60</h5>
+                <button onclick="add('Printer',60)">Add To Cart</button>
+            </div>
+            <div class="sub">
+                <img src="D:\programssss\w100_home_cat_inktoner_v1.avif">
+                <h4>Ink</h4>
+                <h5>Price: $9</h5>
+                <button onclick="add('Ink',9)">Add To Cart</button>
+            </div>
+            <div class="sub">
+                <img src="D:\programssss\w100_home_cat_accessories_v1.avif">
+                <h4>Headset</h4>
+                <h5>Price: $11</h5>
+                <button onclick="add('Headset',11)">Add To Cart</button>
+            </div>
+             <!-- <div class="sub">
+                <img src="w100_image_range_1_default.webp">
+                <h4>Mouse</h4>
+                <h5>Price: $8</h5>
+                <button onclick="add('Mouse',8) ">Add To Cart</button>
+            </div>  -->
+            
+            </div>
+        </div>
+        </div>
+        <footer>
+            <p>&copy; 2025 HP. All rights reserved.<br>Developed by Bavatharini Ramalingam</p>
+        </footer>
+    </body>
+</html>

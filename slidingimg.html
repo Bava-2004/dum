@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Image Slider</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .slider-container {
+            position: relative;
+            display: inline-block;
+        }
+        
+        button {
+            position: absolute;
+            top: 40%;
+           
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        button:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+        
+        .prev {
+            left: 10px;
+        }
+        
+        .next {
+            right: 10px;
+        }
+        
+            </style>
+</head>
+<body>
+    <div class="slider-container">
+        <button class="prev" onclick="prevImage()">&#10094;</button>
+        <img id="slider" src="w100_home_cat_accessories_v1.avif" width="500" height="300">
+        <button class="next" onclick="nextImage()">&#10095;</button>
+    </div>
+    <script>
+        var images = ["w100_home_cat_accessories_v1.avif", "w100_home_cat_desktops_v1.avif", "w100_home_cat_inktoner_v1.avif", "w100_home_cat_laptops_v1.avif","w100_home_cat_monitors_v1.avif"];
+var index = 0;
+
+function nextImage() {
+    index++;
+    if (index >= images.length) {
+        index = 0; // Reset to first image
+    }
+    document.getElementById("slider").src = images[index];
+}
+
+function prevImage() {
+    index--;
+    if (index < 0) {
+        index = images.length - 1; // Go to last image
+    }
+    document.getElementById("slider").src = images[index];
+}
+
+    </script>
+</body>
+</html>

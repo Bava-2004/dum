@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <style>
+            body{
+                margin: 0;
+            }
+             
+            .side{                
+                list-style-type: none; 
+                display: flex;
+                flex-direction: column;                
+                background-color: blanchedalmond;
+                width: 200px;
+                height: 100vh;
+                padding-top: 20px;
+                position: fixed;
+                top: 0px;
+                left: 0;
+            }
+            .side a{
+                text-decoration: none;
+                color:black;
+                display: block;
+                text-align: left;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 25px;
+                border-bottom: 1px solid darkgray;
+            }
+            .side a:hover{
+                color: rgb(69, 69, 74);
+            }
+            .side .mid {
+                margin-top: 75%;                
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <div class="side">
+            <a href="resume.html">Resume</a>
+            <a href="stockstable.html">Stock Table</a>
+            <a href="timetable.html">Time Table</a>
+            <a href="gradienttable.html">Gradient Table</a>
+            <a href="photoex.html" class="mid">Gallery</a>
+            <a href="signin.html">Logout</a>
+        </div>
+        
+    </body>
+</html>

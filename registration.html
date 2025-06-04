@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+        <script type="text/javascript" src="registration.js" defer ></script>
+        <style>
+            body{
+                font-family: Arial, sans-serif;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                height:100vh;
+                align-items: center;
+                background: linear-gradient(47deg, rgb(110, 1, 153), rgb(213, 130, 210));
+            }
+            h1{
+                text-align: left;
+                color: rgb(117, 0, 185);
+            }
+            form{
+                
+                padding-left: 10px;
+                border: 1px solid rgb(34, 33, 33);
+                border-radius: 2px 20px 20px 2px;
+                width: 40%;
+                background-color: white;
+                box-shadow: 12px 15px 21px rgb(48, 47, 47) ;
+            }
+            form input[type="text"]{
+                width: 80%;
+                border-radius: 3px;
+                padding:7px;
+               
+            }
+            form input[type="email"]{
+                width: 80%;
+                border-radius: 3px;
+                padding:7px;
+                
+            }
+            form input[type="password"]{
+                width: 80%;
+                border-radius: 3px;
+                padding:7px;
+                
+            }
+            form button{
+                width: 60%;
+                border-radius: 3px;
+                padding:7px;
+                background:linear-gradient(47deg, rgb(173, 195, 213), rgb(136, 120, 177)); 
+                
+            }
+            form button:hover{
+                background:linear-gradient(47deg, rgb(97, 160, 211), rgb(110, 88, 165)); ;
+            }
+            form label{
+                font-size: medium;
+                color: blueviolet;               
+            }
+            form input:hover{
+                background: lightgray;
+            }
+
+        </style>
+    </head>
+    <body>
+        <form>
+            <h1>Registration Form</h1>
+            <label>Full Name:</label><br>
+            <input type="text" placeholder="Enter the name" id="username">
+            <br>
+            <br>
+            <label>Mail ID:</label><br>
+            <input type="email" placeholder="Enter email ID" id="email" ><br><br>
+            <label>Gender:</label><br>
+            <input type="radio" name="gender" id="male">Male
+            <input type="radio" name="gender" id="female">Female
+            <input type="radio" name="gender" id="nosay">prefer not to say<br><br>
+            <label>New Password:</label><br>
+            <input type="password" placeholder="Enter new password" id="password"><br><br>
+            <label>Confirm Password:</label><br>
+            <input type="password" placeholder="Reenter your password" id="cpassword"><br><br>
+            <button onclick="validateForm()">Register</button><br><br>
+        </form>
+    </body>
+</html>
